@@ -1,0 +1,223 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+}
+
+body {
+    padding-top: 82px;
+}
+
+.container {
+    padding: 0 15px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1210px;
+}
+
+nav {
+    background-color: rgb(52, 45, 45);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 99;
+    height: 82px;
+}
+
+.logo {
+    color: red;
+    margin: 0;
+}
+
+.nav__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__list {
+    display: flex;
+    list-style: none;
+    align-self: center;
+    margin-bottom: 0;
+}
+
+.nav__link {
+    margin: 0 10px;
+    color: wheat;
+}
+
+.lang__bar {
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.intro {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url(1\ BYD\ Seal\ review.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: rgba(255, 0, 0, 0.712);
+    font-weight: 800;
+    text-shadow: 1px 1px 0 #bd8c29;
+}
+
+footer {
+    background-color: rgb(52, 45, 45);
+    padding: 30px 0;
+}
+
+.footer__logo {
+    color: rgba(255, 0, 0, 0.712);
+}
+
+.footer__box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__list {
+    list-style: none;
+    color: wheat
+}
+
+.footer__list:last-of-type {
+    margin-right: 50px;
+}
+
+.box {
+    display: flex;
+    width: 390px;
+    justify-content: space-between;
+    margin: 50px auto;
+    align-items: center;
+}
+
+.cards {
+    padding: 20px;
+    padding-top: 26px;
+    border: 2px solid rgb(52, 45, 45);
+    border-radius: 10px;
+    width: 160px;
+}
+
+.cards i {
+    display: flex;
+    margin-bottom: 15px;
+    justify-content: center;
+}
+
+.cards h5 {
+    text-align: center;
+}
+
+.search__box {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.search {
+    height: 27px;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    padding: 5px;
+    width: 40%;
+}
+
+.search__button {
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    width: 37px;
+}
+
+.category__box {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.category__card {
+    border: 2px solid wheat;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 170px;
+}
+
+.category__card img {
+    width: 100px;
+    object-fit: contain;
+}
+
+.category__card {
+    /* Your existing styles for category cards */
+    /* Add transition for smooth effect */
+    transition: transform 0.3s ease;
+    background-color: #FFF
+}
+
+.category__card:hover {
+    transform: scale(1.05);
+    background-color: #d19b31;
+}
+
+.category__card:focus-within {
+    /* Additional style for maintaining increased size after focus */
+    transform: scale(1.05);
+    background-color: #d19b31;
+}
+
+.category__card:hover h6,
+.category__card:hover p {
+    /* Make text bold on hover */
+    font-weight: bold;
+}
+
+.products__box {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+}
+
+.product__card {
+    border: 1px solid rgb(119, 105, 41);
+    border-radius: 7px;
+    box-shadow: 2px 2px 0 burlywood;
+    width: 190px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.product__card img {
+    width: 120px;
+    object-fit: cover;
+}
+
+.product__card p {
+    text-align: center;
+    font-size: 13px;
+    margin-bottom: 4px;
+}
+
+.product__card h6 {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
