@@ -2,7 +2,6 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Poppins';
 }
 
 body {
@@ -23,6 +22,7 @@ nav {
     top: 0;
     z-index: 99;
     height: 82px;
+    background-color: rgba(56, 47, 47, 0.735);
 }
 
 .logo {
@@ -60,13 +60,17 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: url(1\ BYD\ Seal\ review.jpg);
+    background: url(../../images/1\ BYD\ Seal\ review.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     color: rgba(255, 0, 0, 0.712);
     font-weight: 800;
     text-shadow: 1px 1px 0 #bd8c29;
+}
+.intro h4,
+.intro h1{
+    background-color: rgb(64, 60, 60);
 }
 
 footer {
@@ -101,11 +105,12 @@ footer {
 }
 
 .cards {
-    padding: 20px;
+    padding: 10px;
     padding-top: 26px;
     border: 2px solid rgb(52, 45, 45);
     border-radius: 10px;
-    width: 160px;
+    width: 130px;
+    font-size: 11px;
 }
 
 .cards i {
@@ -122,6 +127,7 @@ footer {
     margin-bottom: 10px;
     display: flex;
     justify-content: center;
+    position: relative;
 }
 
 .search {
@@ -176,8 +182,7 @@ footer {
 
 .category__card:focus-within {
     /* Additional style for maintaining increased size after focus */
-    transform: scale(1.05);
-    background-color: #d19b31;
+    background-color: #cda75a;
 }
 
 .category__card:hover h6,
@@ -197,7 +202,7 @@ footer {
 .product__card {
     border: 1px solid rgb(119, 105, 41);
     border-radius: 7px;
-    box-shadow: 2px 2px 0 burlywood;
+    box-shadow: 2px 2px 2px burlywood;
     width: 190px;
     display: flex;
     flex-direction: column;
@@ -216,8 +221,38 @@ footer {
     font-size: 13px;
     margin-bottom: 4px;
 }
+.product__card p:first-of-type{
+    font-size: 15px;
+    font-weight: 700;
+}
 
 .product__card h6 {
     font-weight: 600;
     margin-bottom: 5px;
+}
+
+.left{
+    margin-left: 10px;
+    
+}
+.right{
+    margin-right: 10px;
+    font-weight: 700;
+}
+#searchResults{
+    background-color: #FFF;
+    position: absolute;
+    top: 34px;
+    width: 450px;
+}
+.resultsDiv{
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    color: black;
+}
+
+.highlight {
+    background-color: yellow;
+    font-weight: bold;
 }

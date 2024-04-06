@@ -1,0 +1,74 @@
+[
+    {
+        "name": "brake pro",
+        "category": "brake",
+        "price": "20$",
+        "number": 57775,
+        "image": "../images/brake2.webp",
+        "model": "NQR",
+        "brand": "ISUZU"
+    },
+    {
+        "name": "brake max",
+        "category": "brake",
+        "price": "20$",
+        "number": 57776,
+        "image": "../images/brake2.webp",
+        "model": "NPR",
+        "brand": "ISUZU"
+    },
+    {
+        "name": "motor pro",
+        "category": "motor",
+        "price": "15$",
+        "number": 57777,
+        "image": "../images/motor.png",
+        "model": "Champion",
+        "brand": "BYD"
+    },
+    {
+        "name": "motor pro",
+        "category": "motor",
+        "price": "20$",
+        "number": 57778,
+        "image": "../images/motor.png",
+        "model": "Song plus",
+        "brand": "BYD"
+    },
+    {
+        "name": "filter pro",
+        "category": "filter",
+        "price": "15$",
+        "number": 57779,
+        "image": "../images/car_filter.png",
+        "model": "NQR",
+        "brand": "ISUZU"
+    },
+    {
+        "name": "filter pro",
+        "category": "filter",
+        "price": "20$",
+        "number": 57780,
+        "image": "../images/car_filter.png",
+        "model": "NPR",
+        "brand": "ISUZU"
+    },
+    {
+        "name": "other pro",
+        "category": "other",
+        "price": "15$",
+        "number": 57781,
+        "image": "../images/others.png!w700wp",
+        "model": "Tang",
+        "brand": "BYD"
+    },
+    {
+        "name": "other pro",
+        "category": "other",
+        "price": "20$",
+        "number": 57782,
+        "image": "../images/others.png!w700wp",
+        "model": "Song",
+        "brand": "BYD"
+    }
+]
