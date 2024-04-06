@@ -99,3 +99,11 @@ main{
     padding-top: 15px;
     border: 1px solid black;
 }
+.product__info *:not(h3,h5){
+    font-size: 15px;
+    margin: 0;
+}
+
+.product__info p:first-of-type{
+    margin-top: 30px;
+}

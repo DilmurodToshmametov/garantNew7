@@ -19,10 +19,14 @@ fetch("../includes/products.json")
     const productName = document.querySelector('.product__name');
     const productPrice = document.querySelector('.product__price');
     const productNumber = document.querySelector('.product__number');
+    const productBrand = document.querySelector('.product__brand');
+    const productModel = document.querySelector('.product__model');
 
     productImage.src = foundProduct.image;
-    productName.textContent = foundProduct.name;
-    productPrice.textContent = foundProduct.price;
-    productNumber.textContent = foundProduct.number;
+    productName.textContent = "Имя товара: " + foundProduct.name;
+    productPrice.textContent = "Цена: " + foundProduct.price;
+    productNumber.textContent = "Код товара: " + foundProduct.number;
+    productBrand.textContent = "Для бренда: " + foundProduct.brand;
+    productBrand.textContent = "Для моделя: " + foundProduct.model;
   })
-  .catch((error) => console.error("Error fetching products data:", error));
+  .catch((error) => console.error("Error fetching products data: ", error));

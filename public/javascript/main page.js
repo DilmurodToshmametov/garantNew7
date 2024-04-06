@@ -26,9 +26,27 @@ function displayProducts(category) {
             <h6>${product.name}</h6>
             <p>Price: ${product.price}</p>
             <p>Product Number: ${product.number}</p>
+            <a href="./view/product.html?id=${product.number}">Подробно о товаре</a>
         `;
     productsBox.appendChild(productCard);
   });
+}
+function displayProducts2(products) {
+    const productsBox = document.querySelector(".products__box");
+    productsBox.innerHTML = ""; // Clear previous products
+    
+    products.forEach(product => {
+        const productCard = document.createElement("div");
+        productCard.classList.add("product__card");
+        productCard.innerHTML = `
+            <img src="${product.image}" alt="${product.name}">
+            <h6>${product.name}</h6>
+            <p>Price: ${product.price}</p>
+            <p>Product Number: ${product.number}</p>
+            <a href="./view/product.html?id=${product.number}">Подробно о товаре</a>
+        `;
+        productsBox.appendChild(productCard);
+    });
 }
 
 // Event listener for category cards
@@ -41,6 +59,14 @@ document.querySelectorAll(".category__card").forEach((card) => {
 
 const searchInput = document.getElementById("searchInput");
 const searchResultsContainer = document.getElementById("searchResults");
+const searchButton = document.querySelector('.search__button');
+
+searchButton.addEventListener("click", () => {
+    const userInput = searchInput.value.toLowerCase().trim();
+
+    displayProducts2(searchProducts(userInput));
+
+})
 
 searchInput.addEventListener("input", () => {
   const query = searchInput.value.toLowerCase().trim();
@@ -90,3 +116,4 @@ function highlightMatchedString(text, query) {
     (match) => `<span class="highlight">${match}</span>`
   );
 }
+

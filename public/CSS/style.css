@@ -194,9 +194,8 @@ footer {
 .products__box {
     margin-top: 20px;
     margin-bottom: 40px;
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
 }
 
 .product__card {
