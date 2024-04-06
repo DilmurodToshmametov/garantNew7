@@ -26,7 +26,7 @@ function displayProducts(category) {
             <h6>${product.name}</h6>
             <p>Price: ${product.price}</p>
             <p>Product Number: ${product.number}</p>
-            <a href="./view/product.html?id=${product.number}">Подробно о товаре</a>
+            <a href="./view/product.html?id=${product.number}">Подробнее о товаре</a>
         `;
     productsBox.appendChild(productCard);
   });
@@ -43,7 +43,7 @@ function displayProducts2(products) {
             <h6>${product.name}</h6>
             <p>Price: ${product.price}</p>
             <p>Product Number: ${product.number}</p>
-            <a href="./view/product.html?id=${product.number}">Подробно о товаре</a>
+            <a href="./view/product.html?id=${product.number}">Подробнее о товаре</a>
         `;
         productsBox.appendChild(productCard);
     });

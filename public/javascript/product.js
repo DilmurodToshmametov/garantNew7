@@ -27,6 +27,6 @@ fetch("../includes/products.json")
     productPrice.textContent = "Цена: " + foundProduct.price;
     productNumber.textContent = "Код товара: " + foundProduct.number;
     productBrand.textContent = "Для бренда: " + foundProduct.brand;
-    productBrand.textContent = "Для моделя: " + foundProduct.model;
+    productModel.textContent = "Для моделя: " + foundProduct.model;
   })
   .catch((error) => console.error("Error fetching products data: ", error));
