@@ -32,21 +32,21 @@ function displayProducts(category) {
   });
 }
 function displayProducts2(products) {
-    const productsBox = document.querySelector(".products__box");
-    productsBox.innerHTML = ""; // Clear previous products
-    
-    products.forEach(product => {
-        const productCard = document.createElement("div");
-        productCard.classList.add("product__card");
-        productCard.innerHTML = `
+  const productsBox = document.querySelector(".products__box");
+  productsBox.innerHTML = ""; // Clear previous products
+
+  products.forEach((product) => {
+    const productCard = document.createElement("div");
+    productCard.classList.add("product__card");
+    productCard.innerHTML = `
             <img src="${product.image}" alt="${product.name}">
             <h6>${product.name}</h6>
             <p>Price: ${product.price}</p>
             <p>Product Number: ${product.number}</p>
             <a href="./view/product.html?id=${product.number}">Подробнее о товаре</a>
         `;
-        productsBox.appendChild(productCard);
-    });
+    productsBox.appendChild(productCard);
+  });
 }
 
 // Event listener for category cards
@@ -59,14 +59,13 @@ document.querySelectorAll(".category__card").forEach((card) => {
 
 const searchInput = document.getElementById("searchInput");
 const searchResultsContainer = document.getElementById("searchResults");
-const searchButton = document.querySelector('.search__button');
+const searchButton = document.querySelector(".search__button");
 
 searchButton.addEventListener("click", () => {
-    const userInput = searchInput.value.toLowerCase().trim();
+  const userInput = searchInput.value.toLowerCase().trim();
 
-    displayProducts2(searchProducts(userInput));
-
-})
+  displayProducts2(searchProducts(userInput));
+});
 
 searchInput.addEventListener("input", () => {
   const query = searchInput.value.toLowerCase().trim();
@@ -115,5 +114,44 @@ function highlightMatchedString(text, query) {
     regex,
     (match) => `<span class="highlight">${match}</span>`
   );
+}
+
+const categoryList = {}; // Create an empty object to store category list elements
+const categoryImage = document.getElementById('category__image');
+
+// Define the category images object
+const categoryImages = {
+  cat1: "../../images/1dvigatel.png",
+  cat2: "../../images/2korobka-peredach.png",
+  cat3: "../../images/3steplenie.png",
+  cat4: "../../images/4sistema.png",
+  cat5: "../../images/5toplivnaya.png",
+  cat6: "../../images/6vixopnaya.png",
+  cat7: "../../images/7kardannie.png",
+  cat8: "../../images/8tormoznaya.png",
+  cat9: "../../images/9mosti.png",
+  cat10: "../../images/10stupitsa.png",
+  cat11: "../../images/11podveska.png",
+  cat12: "../../images/12rulevaya.png",
+  cat13: "../../images/13elektro.png",
+  cat14: "../../images/14filtra.png",
+  cat15: "../../images/15kuzov.png"
+};
+
+// Loop through IDs from 'cat1' to 'cat15'
+for (let i = 1; i <= 15; i++) {
+  const categoryId = `cat${i}`;
+  categoryList[categoryId] = document.getElementById(categoryId);
+  
+  categoryList[categoryId].addEventListener('mouseenter', function() {
+    const imageSrc = categoryImages[categoryId];
+    if (imageSrc) {
+      categoryImage.src = imageSrc;
+    }
+  });
+  categoryList[categoryId].addEventListener('click', function() {
+    displayProducts(i)
+    
+  });
 }
 

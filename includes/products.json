@@ -1,8 +1,8 @@
 [
     {
         "name": "brake pro",
-        "category": "brake",
-        "price": "20$",
+        "category": 8,
+        "price": 40,
         "number": 57775,
         "image": "../images/brake2.webp",
         "model": "NQR",
@@ -10,8 +10,8 @@
     },
     {
         "name": "brake max",
-        "category": "brake",
-        "price": "20$",
+        "category": 8,
+        "price": 10,
         "number": 57776,
         "image": "../images/brake2.webp",
         "model": "NPR",
@@ -19,8 +19,8 @@
     },
     {
         "name": "motor pro",
-        "category": "motor",
-        "price": "15$",
+        "category": 1,
+        "price": 30,
         "number": 57777,
         "image": "../images/motor.png",
         "model": "Champion",
@@ -28,8 +28,8 @@
     },
     {
         "name": "motor pro",
-        "category": "motor",
-        "price": "20$",
+        "category": 1,
+        "price": 30,
         "number": 57778,
         "image": "../images/motor.png",
         "model": "Song plus",
@@ -37,8 +37,8 @@
     },
     {
         "name": "filter pro",
-        "category": "filter",
-        "price": "15$",
+        "category": 14,
+        "price": 15,
         "number": 57779,
         "image": "../images/car_filter.png",
         "model": "NQR",
@@ -46,8 +46,8 @@
     },
     {
         "name": "filter pro",
-        "category": "filter",
-        "price": "20$",
+        "category": 14,
+        "price": 20,
         "number": 57780,
         "image": "../images/car_filter.png",
         "model": "NPR",
@@ -55,8 +55,8 @@
     },
     {
         "name": "other pro",
-        "category": "other",
-        "price": "15$",
+        "category": 15,
+        "price": 15,
         "number": 57781,
         "image": "../images/others.png!w700wp",
         "model": "Tang",
@@ -64,8 +64,8 @@
     },
     {
         "name": "other pro",
-        "category": "other",
-        "price": "20$",
+        "category": 15,
+        "price": 20,
         "number": 57782,
         "image": "../images/others.png!w700wp",
         "model": "Song",
