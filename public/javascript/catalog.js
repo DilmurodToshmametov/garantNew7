@@ -105,21 +105,21 @@ const categoryImage = document.getElementById("category__image");
 
 // Define the category images object
 const categoryImages = {
-  cat1: "../../images/1dvigatel.png",
-  cat2: "../../images/2korobka-peredach.png",
-  cat3: "../../images/3steplenie.png",
-  cat4: "../../images/4sistema.png",
-  cat5: "../../images/5toplivnaya.png",
-  cat6: "../../images/6vixopnaya.png",
-  cat7: "../../images/7kardannie.png",
-  cat8: "../../images/8tormoznaya.png",
-  cat9: "../../images/9mosti.png",
-  cat10: "../../images/10stupitsa.png",
-  cat11: "../../images/11podveska.png",
-  cat12: "../../images/12rulevaya.png",
-  cat13: "../../images/13elektro.png",
-  cat14: "../../images/14filtra.png",
-  cat15: "../../images/15kuzov.png",
+  cat1: "./images/1dvigatel.png",
+  cat2: "./images/2korobka-peredach.png",
+  cat3: "./images/3steplenie.png",
+  cat4: "./images/4sistema.png",
+  cat5: "./images/5toplivnaya.png",
+  cat6: "./images/6vixopnaya.png",
+  cat7: "./images/7kardannie.png",
+  cat8: "./images/8tormoznaya.png",
+  cat9: "./images/9mosti.png",
+  cat10: "./images/10stupitsa.png",
+  cat11: "./images/11podveska.png",
+  cat12: "./images/12rulevaya.png",
+  cat13: "./images/13elektro.png",
+  cat14: "./images/14filtra.png",
+  cat15: "./images/15kuzov.png",
 };
 
 // Loop through IDs from 'cat1' to 'cat15'
