@@ -4,7 +4,7 @@
         "category": 8,
         "price": 40,
         "number": 57775,
-        "image": "../images/brake2.webp",
+        "image": "./images/brake2.webp",
         "model": "NQR",
         "brand": "ISUZU"
     },
@@ -13,7 +13,7 @@
         "category": 8,
         "price": 10,
         "number": 57776,
-        "image": "../images/brake2.webp",
+        "image": "./images/brake2.webp",
         "model": "NPR",
         "brand": "ISUZU"
     },
@@ -22,7 +22,7 @@
         "category": 1,
         "price": 30,
         "number": 57777,
-        "image": "../images/motor.png",
+        "image": "./images/motor.png",
         "model": "Champion",
         "brand": "BYD"
     },
@@ -31,7 +31,7 @@
         "category": 1,
         "price": 30,
         "number": 57778,
-        "image": "../images/motor.png",
+        "image": "./images/motor.png",
         "model": "Song plus",
         "brand": "BYD"
     },
@@ -40,7 +40,7 @@
         "category": 14,
         "price": 15,
         "number": 57779,
-        "image": "../images/car_filter.png",
+        "image": "./images/car_filter.png",
         "model": "NQR",
         "brand": "ISUZU"
     },
@@ -49,7 +49,7 @@
         "category": 14,
         "price": 20,
         "number": 57780,
-        "image": "../images/car_filter.png",
+        "image": "./images/car_filter.png",
         "model": "NPR",
         "brand": "ISUZU"
     },
@@ -58,7 +58,7 @@
         "category": 15,
         "price": 15,
         "number": 57781,
-        "image": "../images/others.png!w700wp",
+        "image": "./images/others.png!w700wp",
         "model": "Tang",
         "brand": "BYD"
     },
@@ -67,7 +67,7 @@
         "category": 15,
         "price": 20,
         "number": 57782,
-        "image": "../images/others.png!w700wp",
+        "image": "./images/others.png!w700wp",
         "model": "Song",
         "brand": "BYD"
     }
