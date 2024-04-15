@@ -1,6 +1,6 @@
 let products; // Define 'products' variable globallyF
 // Fetching data from JSON file
-fetch("../../includes/products.json")
+fetch("../includes/products.json")
   .then((response) => response.json())
   .then((data) => {
     products = data;
