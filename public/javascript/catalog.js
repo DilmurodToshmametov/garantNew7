@@ -1,6 +1,5 @@
-let products; // Define 'products' variable globally
+let products;
 
-// Fetching data from JSON file
 fetch("../includes/products.json")
   .then((response) => response.json())
   .then((data) => {
@@ -48,14 +47,6 @@ function displayProducts2(products) {
     productsBox.appendChild(productCard);
   });
 }
-
-// Event listener for category cards
-document.querySelectorAll(".category__card").forEach((card) => {
-  card.addEventListener("click", function () {
-    const category = this.getAttribute("data-category");
-    displayProducts(category);
-  });
-});
 
 const searchInput = document.getElementById("searchInput");
 const searchResultsContainer = document.getElementById("searchResults");
@@ -108,16 +99,9 @@ function displaySearchResults(results, query) {
     });
   }
 }
-function highlightMatchedString(text, query) {
-  const regex = new RegExp(query, "gi");
-  return text.replace(
-    regex,
-    (match) => `<span class="highlight">${match}</span>`
-  );
-}
 
 const categoryList = {}; // Create an empty object to store category list elements
-const categoryImage = document.getElementById('category__image');
+const categoryImage = document.getElementById("category__image");
 
 // Define the category images object
 const categoryImages = {
@@ -135,23 +119,98 @@ const categoryImages = {
   cat12: "../../images/12rulevaya.png",
   cat13: "../../images/13elektro.png",
   cat14: "../../images/14filtra.png",
-  cat15: "../../images/15kuzov.png"
+  cat15: "../../images/15kuzov.png",
 };
 
 // Loop through IDs from 'cat1' to 'cat15'
+let currentCategoryId = null; // Variable to store the currently clicked category ID
+
 for (let i = 1; i <= 15; i++) {
   const categoryId = `cat${i}`;
   categoryList[categoryId] = document.getElementById(categoryId);
-  
-  categoryList[categoryId].addEventListener('mouseenter', function() {
+
+  categoryList[categoryId].addEventListener("mouseenter", function () {
     const imageSrc = categoryImages[categoryId];
     if (imageSrc) {
       categoryImage.src = imageSrc;
     }
   });
-  categoryList[categoryId].addEventListener('click', function() {
-    displayProducts(i)
-    
+  categoryList[categoryId].addEventListener("click", function () {
+    currentCategoryId = categoryId;
+    displayProducts(i);
+    const prevFocused = document.querySelector(".focused");
+    if (prevFocused) {
+      prevFocused.classList.remove("focused");
+    }
+
+    categoryList[categoryId].classList.add("focused");
+
+    // const prevFocus = document.querySelector(".focused").classList.remove('focused');
+    // categoryList[i].classList.add('focused');
+
+    categoryList[categoryId].addEventListener("mouseleave", function () {
+      // Check if a category image is clicked
+      if (currentCategoryId !== null) {
+        // Check if the mouse is not hovering over any category name
+        const hoveredCategory = Object.values(categoryList).find((cat) =>
+          cat.matches(":hover")
+        );
+        if (!hoveredCategory) {
+          // If not hovering over any category name, keep the clicked category image
+          const imageSrc = categoryImages[currentCategoryId];
+          if (imageSrc) {
+            categoryImage.src = imageSrc;
+          }
+        }
+      }
+    });
   });
 }
 
+// let currentCategoryId = null; // Variable to store the currently clicked category ID
+
+// // Loop through IDs from 'cat1' to 'cat15'
+// for (let i = 1; i <= 15; i++) {
+//   const categoryId = `cat${i}`;
+//   categoryList[categoryId] = document.getElementById(categoryId);
+
+//   categoryList[categoryId].addEventListener('mouseenter', function() {
+//     // Check if no category image is clicked or if the currently hovered category is different from the clicked one
+//     if (currentCategoryId === null || currentCategoryId !== categoryId) {
+//       const imageSrc = categoryImages[categoryId];
+//       if (imageSrc) {
+//         categoryImage.src = imageSrc;
+//       }
+//     }
+//   });
+
+//   categoryList[categoryId].addEventListener('click', function() {
+//     // Update the currentCategoryId when a category name is clicked
+//     currentCategoryId = categoryId;
+//     displayProducts(i); // Display products for the clicked category
+
+//     // Remove focus class from previously clicked category name
+//     const prevFocused = document.querySelector('.focused');
+//     if (prevFocused) {
+//       prevFocused.classList.remove('focused');
+//     }
+
+//     // Add focus class to the clicked category name
+//     categoryList[categoryId].classList.add('focused');
+//   });
+
+//   categoryList[categoryId].addEventListener('mouseleave', function() {
+//     // Check if a category image is clicked
+//     if (currentCategoryId !== null) {
+//       // Check if the mouse is not hovering over any category name
+//       const hoveredCategory = Object.values(categoryList).find(cat => cat.matches(':hover'));
+//       if (!hoveredCategory) {
+//         // If not hovering over any category name, keep the clicked category image
+//         const imageSrc = categoryImages[currentCategoryId];
+//         if (imageSrc) {
+//           categoryImage.src = imageSrc;
+//         }
+//       }
+//     }
+//   });
+// }

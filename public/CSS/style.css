@@ -144,61 +144,17 @@ footer {
     border-bottom-right-radius: 7px;
     width: 37px;
 }
-
-/* .category__box {
-    width: 70%;
-    margin: 0 auto;
-    display: flex;
-    gap: 20px;
-    justify-content: space-between;
+.category{
+    transition: 0.5s;
+    padding: 4px;
 }
 
-.category__card {
-    border: 2px solid wheat;
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 170px;
-    height: 170px;
-}
-
-.category__card img {
-    width: 100px;
-    object-fit: contain;
-}
-
-.category__card {
-    /* Your existing styles for category cards */
-/* Add transition for smooth effect 
-transition: transform 0.3s ease;
-background-color: #FFF
-}
-
-.category__card:hover {
-    transform: scale(1.05);
-    background-color: #d19b31;
-}
-
-.category__card:focus-within {
-
-    background-color: #cda75a;
-}
-
-.category__card:hover h6,
-.category__card:hover p {
-
-    font-weight: bold;
-}
-*/
 .category__section{
     margin: 50px 0;
 }
-.category {
+.category__section li{
     list-style: none;
     transition: 0.6s;
-    margin-bottom: 5px;
 }
 .category__title{
     margin-bottom: 15px;
@@ -206,14 +162,17 @@ background-color: #FFF
 .category__active {
     color: rgb(234, 37, 37);
 }
-.category:hover {
+.category:hover,
+.category:focus{
     cursor: pointer;
     color: rgb(234, 37, 37);
     transform: scalex(1.1);
     /* list-style-image: ".
     ./images/TriangleArrow-Right.svg";  */
 }
-
+.focused{
+    color: rgb(234, 37, 37);
+}
 .category__container {
     background-color: rgb(237, 237, 237);
    
@@ -228,7 +187,9 @@ background-color: #FFF
     display: flex;
     justify-content: space-between;
 }
-
+.category__section button{
+    border: none;
+}
 .products__box {
     margin-top: 20px;
     margin-bottom: 40px;
