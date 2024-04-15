@@ -1,7 +1,7 @@
 let products;
 
 fetch("../../includes/products.json")
-  .then((response) => response.json())
+  .then(response => response.json())
   .then((data) => {
     products = data; // Assign 'data' to 'products' variable
     // After fetching, you can now perform any operations with 'products'
