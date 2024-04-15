@@ -122,6 +122,10 @@ const categoryImages = {
   cat15: "./images/15kuzov.png",
 };
 
+const selectModel = document.getElementById('select__model');
+const selectCategory = document.getElementById('select__category');
+
+
 // Loop through IDs from 'cat1' to 'cat15'
 let currentCategoryId = null; // Variable to store the currently clicked category ID
 
@@ -138,6 +142,9 @@ for (let i = 1; i <= 15; i++) {
   categoryList[categoryId].addEventListener("click", function () {
     currentCategoryId = categoryId;
     displayProducts(i);
+    
+    selectCategory.options[i].selected = true;
+
     const prevFocused = document.querySelector(".focused");
     if (prevFocused) {
       prevFocused.classList.remove("focused");
