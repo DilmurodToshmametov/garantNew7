@@ -14,7 +14,7 @@ function displayProducts(category) {
   const productsBox = document.querySelector(".products__box");
   productsBox.innerHTML = ""; // Clear previous products
 
-  const filteredProducts = products.filter(
+  let filteredProducts = products.filter(
     (product) => product.category === category
   );
   filteredProducts.forEach((product) => {
@@ -29,6 +29,27 @@ function displayProducts(category) {
         `;
     productsBox.appendChild(productCard);
   });
+}
+function displayProductsByModel(model){
+  const productsBox = document.querySelector(".products__box");
+  productsBox.innerHTML = ""; // Clear previous products
+
+  let filteredProducts = products.filter(
+    (product) => product.model.includes(model)
+  );
+  filteredProducts.forEach((product) => {
+    const productCard = document.createElement("div");
+    productCard.classList.add("product__card");
+    productCard.innerHTML = `
+            <img src="${product.image}" alt="${product.name}">
+            <h6>${product.name}</h6>
+            <p>Price: ${product.price}</p>
+            <p>Product Number: ${product.number}</p>
+            <a href="./view/product.html?id=${product.number}">Подробнее о товаре</a>
+        `;
+    productsBox.appendChild(productCard);
+  });
+
 }
 function displayProducts2(products) {
   const productsBox = document.querySelector(".products__box");
@@ -76,7 +97,7 @@ function searchProducts(query) {
   );
 }
 
-function displaySearchResults(results, query) {
+function displaySearchResults(results) {
   searchResultsContainer.innerHTML = ""; // Clear previous search results
 
   if (results.length === 0) {
@@ -85,16 +106,16 @@ function displaySearchResults(results, query) {
     results.forEach((result) => {
       const resultElement = document.createElement("a");
 
-      const highlightedName = highlightMatchedString(result.name, query);
-      const highlightedModel = highlightMatchedString(result.model, query);
-      const highlightedBrand = highlightMatchedString(result.brand, query);
+      // const highlightedName = highlightMatchedString(result.name, query);
+      // const highlightedModel = highlightMatchedString(result.model, query);
+      // const highlightedBrand = highlightMatchedString(result.brand, query);
 
       resultElement.classList.add("resultsDiv");
       resultElement.setAttribute(
         "href",
         `./view/product.html?id=${result.number}`
       );
-      resultElement.innerHTML = `<span class="left">${result.name} - ${result.model} (${result.brand})</span><span class="right">${result.price}</span>`;
+      resultElement.innerHTML = `<span class="left">${result.name} - ${result.model[0]} (${result.brand})</span><span class="right">${result.price}</span>`;
       searchResultsContainer.appendChild(resultElement);
     });
   }
@@ -107,7 +128,7 @@ const categoryImage = document.getElementById("category__image");
 const categoryImages = {
   cat1: "./images/1dvigatel.png",
   cat2: "./images/2korobka-peredach.png",
-  cat3: "./images/3steplenie.png",
+  cat3: "./images/3Steplenie.png",
   cat4: "./images/4sistema.png",
   cat5: "./images/5toplivnaya.png",
   cat6: "./images/6vixopnaya.png",
@@ -124,9 +145,17 @@ const categoryImages = {
 
 const selectModel = document.getElementById('select__model');
 const selectCategory = document.getElementById('select__category');
+let selectedCategoryId = null;
 
+selectCategory.addEventListener('change', function(){
+selectedCategoryId = this.value; // Get the value of the selected option
+  displayProducts(parseInt(selectedCategoryId)); // Display the products for the selected 
+});
+selectModel.addEventListener('change', function(){
+  const selectedModel = this.value;
+  displayProductsByModel(selectedModel);
+})
 
-// Loop through IDs from 'cat1' to 'cat15'
 let currentCategoryId = null; // Variable to store the currently clicked category ID
 
 for (let i = 1; i <= 15; i++) {
@@ -139,10 +168,15 @@ for (let i = 1; i <= 15; i++) {
       categoryImage.src = imageSrc;
     }
   });
+
+  // selectCategory.options[i].addEventListener('change', function(){
+  //   displayProducts(i);
+  // })
+
   categoryList[categoryId].addEventListener("click", function () {
     currentCategoryId = categoryId;
     displayProducts(i);
-    
+    selectModel.options[0].selected = true;
     selectCategory.options[i].selected = true;
 
     const prevFocused = document.querySelector(".focused");
@@ -151,9 +185,6 @@ for (let i = 1; i <= 15; i++) {
     }
 
     categoryList[categoryId].classList.add("focused");
-
-    // const prevFocus = document.querySelector(".focused").classList.remove('focused');
-    // categoryList[i].classList.add('focused');
 
     categoryList[categoryId].addEventListener("mouseleave", function () {
       // Check if a category image is clicked
@@ -174,50 +205,3 @@ for (let i = 1; i <= 15; i++) {
   });
 }
 
-// let currentCategoryId = null; // Variable to store the currently clicked category ID
-
-// // Loop through IDs from 'cat1' to 'cat15'
-// for (let i = 1; i <= 15; i++) {
-//   const categoryId = `cat${i}`;
-//   categoryList[categoryId] = document.getElementById(categoryId);
-
-//   categoryList[categoryId].addEventListener('mouseenter', function() {
-//     // Check if no category image is clicked or if the currently hovered category is different from the clicked one
-//     if (currentCategoryId === null || currentCategoryId !== categoryId) {
-//       const imageSrc = categoryImages[categoryId];
-//       if (imageSrc) {
-//         categoryImage.src = imageSrc;
-//       }
-//     }
-//   });
-
-//   categoryList[categoryId].addEventListener('click', function() {
-//     // Update the currentCategoryId when a category name is clicked
-//     currentCategoryId = categoryId;
-//     displayProducts(i); // Display products for the clicked category
-
-//     // Remove focus class from previously clicked category name
-//     const prevFocused = document.querySelector('.focused');
-//     if (prevFocused) {
-//       prevFocused.classList.remove('focused');
-//     }
-
-//     // Add focus class to the clicked category name
-//     categoryList[categoryId].classList.add('focused');
-//   });
-
-//   categoryList[categoryId].addEventListener('mouseleave', function() {
-//     // Check if a category image is clicked
-//     if (currentCategoryId !== null) {
-//       // Check if the mouse is not hovering over any category name
-//       const hoveredCategory = Object.values(categoryList).find(cat => cat.matches(':hover'));
-//       if (!hoveredCategory) {
-//         // If not hovering over any category name, keep the clicked category image
-//         const imageSrc = categoryImages[currentCategoryId];
-//         if (imageSrc) {
-//           categoryImage.src = imageSrc;
-//         }
-//       }
-//     }
-//   });
-// }

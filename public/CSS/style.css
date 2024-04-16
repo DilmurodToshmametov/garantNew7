@@ -14,7 +14,7 @@ body {
     width: 100%;
     max-width: 1340px;
 }
-
+/* ////           NAVIGATION                //// */
 nav {
     background-color: rgb(52, 45, 45);
     position: fixed;
@@ -73,28 +73,46 @@ nav {
 .intro h1 {
     background-color: rgb(64, 60, 60);
 }
-
+/* /////         FOOTER          ///// */
 footer {
     background-color: rgb(52, 45, 45);
     padding: 30px 0;
 }
 
-.footer__logo {
+/* .footer__logo {
     color: rgba(255, 0, 0, 0.712);
-}
+} */
 
 .footer__box {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
-
+.footer__line{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
 .footer__list {
     list-style: none;
-    color: wheat
+    color: wheat;
+    list-style-type: none;
 }
 
-.footer__list:last-of-type {
-    margin-right: 50px;
+.footer__link {
+    color: red;
+    text-decoration: none;
+    font: 13px;
+}
+.footer__link:hover{
+    color: white;
+    text-decoration:solid;
+}
+
+.footer__title{
+    font-size: 17px;
+    color: white;
+    margin-bottom: 10px;
 }
 
 .box {
@@ -144,38 +162,45 @@ footer {
     border-bottom-right-radius: 7px;
     width: 37px;
 }
-.category{
+
+.category {
     transition: 0.5s;
     padding: 4px;
 }
 
-.category__section{
+.category__section {
     margin: 50px 0;
 }
-.category__section li{
+
+.category__section li {
     list-style: none;
     transition: 0.6s;
 }
-.category__title{
+
+.category__title {
     margin-bottom: 15px;
 }
+
 .category__active {
     color: rgb(234, 37, 37);
 }
+
 .category:hover,
-.category:focus{
+.category:focus {
     cursor: pointer;
     color: rgb(234, 37, 37);
     transform: scalex(1.1);
     /* list-style-image: ".
     ./images/TriangleArrow-Right.svg";  */
 }
-.focused{
+
+.focused {
     color: rgb(234, 37, 37);
 }
+
 .category__container {
     background-color: rgb(237, 237, 237);
-   
+
 }
 
 .category__box {
@@ -187,9 +212,11 @@ footer {
     display: flex;
     justify-content: space-between;
 }
-.category__section button{
+
+.category__section button {
     border: none;
 }
+
 .products__box {
     margin-top: 20px;
     margin-bottom: 40px;
@@ -207,7 +234,8 @@ footer {
     align-items: center;
 
 }
-.products__section{
+
+.products__section {
     margin: 60px 0;
 }
 
