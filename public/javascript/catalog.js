@@ -21,10 +21,12 @@ function displayProducts(category) {
     const productCard = document.createElement("div");
     productCard.classList.add("product__card");
     productCard.innerHTML = `
+            <div class="product__img-container">
             <img src="${product.image}" alt="${product.name}">
+            </div>
             <h6>${product.name}</h6>
-            <p>Price: ${product.price}</p>
-            <p>Product Number: ${product.number}</p>
+            <p>Цена: ${product.price}$</p>
+            <p>Код товара: ${product.number}</p>
             <a href="./view/product.html?id=${product.number}">Подробнее о товаре</a>
         `;
     productsBox.appendChild(productCard);

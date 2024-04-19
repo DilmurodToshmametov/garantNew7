@@ -227,38 +227,44 @@ footer {
 
 .product__card {
     border: 1px solid rgb(132, 130, 118);
-    width: 180px;
+    width: 190px;
     display: flex;
     flex-direction: column;
-    height: 210px;
+    height: 300px;
     padding: 10px;
 }
 
 .products__section {
     margin: 60px 0;
 }
+
 .product__img-container{
-    height: 200px;
+    display: flex;
+    justify-content: center;
+    height: 120px;
 }
+
 .product__card img {
-    width: 150px;
-    object-fit:cover;
+   width: 158px;
+   height: 120px;
+   object-fit: cover;
+   object-position: center;
 }
 
 .product__card p {
-    text-align: center;
     font-size: 13px;
-    margin-bottom: 4px;
+    margin-bottom: 2px;
 }
 
 .product__card p:first-of-type {
-    font-size: 15px;
-    font-weight: 700;
+    font-size: 13px;
+    font-weight: 600;
 }
 
 .product__card h6 {
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 600;
+    margin: 10px 0;
     margin-bottom: 5px;
     text-align: center;
 }

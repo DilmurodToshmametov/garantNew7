@@ -76,7 +76,7 @@
         "category": 11,
         "price": 12,
         "number": 71174,
-        "image": "./images/ressor.jpg",
+        "image": "./images/ressor1.png",
         "model": ["NQR 71","NPR 37", "NQR 75"],
         "brand": "ISUZU"
     },
@@ -85,7 +85,7 @@
         "category": 11,
         "price": 11,
         "number": 71175,
-        "image": "./images/ressor.jpg",
+        "image": "./images/ressor1.png",
         "model": ["NQR 71","NPR 37", "NQR 75"],
         "brand": "ISUZU"
     },
@@ -94,7 +94,7 @@
         "category": 11,
         "price": 10,
         "number": 71177,
-        "image": "./images/ressor.jpg",
+        "image": "./images/ressor1.png",
         "model": ["NQR 71","NPR 37", "NQR 75"],
         "brand": "ISUZU"
     },
@@ -103,7 +103,7 @@
         "category": 11,
         "price": 8.5,
         "number": 71176,
-        "image": "./images/ressor.jpg",
+        "image": "./images/ressor1.png",
         "model": ["NQR 71","NPR 37", "NQR 75"],
         "brand": "ISUZU"
     },
@@ -112,7 +112,7 @@
         "category": 11,
         "price": 20.5,
         "number": 57775,
-        "image": "./images/ressor.jpg",
+        "image": "./images/ressor1.png",
         "model": ["NQR 71","NPR 37", "NQR 75"],
         "brand": "ISUZU"
     },
@@ -121,7 +121,7 @@
         "category": 11,
         "price": 17,
         "number": 57776,
-        "image": "./images/ressor.jpg",
+        "image": "./images/ressor1.png",
         "model": ["NQR 71","NPR 37", "NQR 75"],
         "brand": "ISUZU"
     },
@@ -130,7 +130,7 @@
         "category": 11,
         "price": 17,
         "number": 57777,
-        "image": "./images/ressor.jpg",
+        "image": "./images/ressor1.png",
         "model": ["NQR 71","NPR 37", "NQR 75"],
         "brand": "ISUZU"
     },
@@ -139,7 +139,7 @@
         "category": 11,
         "price": 17,
         "number": 57774,
-        "image": "./images/ressor.jpg",
+        "image": "./images/ressor1.png",
         "model": ["NQR 71","NPR 37", "NQR 75"],
         "brand": "ISUZU"
     }
