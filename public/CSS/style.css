@@ -230,18 +230,19 @@ footer {
     width: 180px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
+    height: 210px;
+    padding: 10px;
 }
 
 .products__section {
     margin: 60px 0;
 }
-
+.product__img-container{
+    height: 200px;
+}
 .product__card img {
-    width: 120px;
-    object-fit: cover;
+    width: 150px;
+    object-fit:cover;
 }
 
 .product__card p {
@@ -256,8 +257,10 @@ footer {
 }
 
 .product__card h6 {
+    font-size: 13px;
     font-weight: 600;
     margin-bottom: 5px;
+    text-align: center;
 }
 
 .left {

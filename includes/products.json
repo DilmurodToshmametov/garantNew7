@@ -45,12 +45,12 @@
         "brand": "ISUZU"
     },
     {
-        "name": "filter pro",
+        "name": "filter max",
         "category": 14,
         "price": 20,
         "number": 57780,
         "image": "./images/car_filter.png",
-        "model": ["NPR 37"],
+        "model": ["NPR 37", "NQR 71"],
         "brand": "ISUZU"
     },
     {
@@ -70,7 +70,80 @@
         "image": "./images/others.png!w700wp",
         "model": ["Song"],
         "brand": "BYD"
+    },
+    {
+        "name": "Верхний рессор задний лист №2 (1 метр) 71174 Universal",
+        "category": 11,
+        "price": 12,
+        "number": 71174,
+        "image": "./images/ressor.jpg",
+        "model": ["NQR 71","NPR 37", "NQR 75"],
+        "brand": "ISUZU"
+    },
+    {
+        "name": "Верхний рессор задний лист №3 (90 см) 71175  Universal",
+        "category": 11,
+        "price": 11,
+        "number": 71175,
+        "image": "./images/ressor.jpg",
+        "model": ["NQR 71","NPR 37", "NQR 75"],
+        "brand": "ISUZU"
+    },
+    {
+        "name": "Верхний рессор задний лист №3 (90 см) 71175  Universal",
+        "category": 11,
+        "price": 10,
+        "number": 71177,
+        "image": "./images/ressor.jpg",
+        "model": ["NQR 71","NPR 37", "NQR 75"],
+        "brand": "ISUZU"
+    },
+    {
+        "name": "Верхний рессор задний лист №5  (70 см)  71176 Universal",
+        "category": 11,
+        "price": 8.5,
+        "number": 71176,
+        "image": "./images/ressor.jpg",
+        "model": ["NQR 71","NPR 37", "NQR 75"],
+        "brand": "ISUZU"
+    },
+    {
+        "name": "Рессора задняя коренная 307-0 R1  NQP 71, NP 37",
+        "category": 11,
+        "price": 20.5,
+        "number": 57775,
+        "image": "./images/ressor.jpg",
+        "model": ["NQR 71","NPR 37", "NQR 75"],
+        "brand": "ISUZU"
+    },
+    {
+        "name": "Рессора задняя подкоренная 307-0 R2 NQP 71, NP 37",
+        "category": 11,
+        "price": 17,
+        "number": 57776,
+        "image": "./images/ressor.jpg",
+        "model": ["NQR 71","NPR 37", "NQR 75"],
+        "brand": "ISUZU"
+    },
+    {
+        "name": "Рессора передняя коренная  308-0 R1  NQP 71, NP 37",
+        "category": 11,
+        "price": 17,
+        "number": 57777,
+        "image": "./images/ressor.jpg",
+        "model": ["NQR 71","NPR 37", "NQR 75"],
+        "brand": "ISUZU"
+    },
+    {
+        "name": "Рессора передняя подкоренная  308-0 R2 NQP 71, NP 37",
+        "category": 11,
+        "price": 17,
+        "number": 57774,
+        "image": "./images/ressor.jpg",
+        "model": ["NQR 71","NPR 37", "NQR 75"],
+        "brand": "ISUZU"
     }
+
 
     
 ]

@@ -1,7 +1,7 @@
 let products;
 
 fetch("./includes/products.json")
-  .then(response => response.json())
+  .then((response) => response.json())
   .then((data) => {
     products = data; // Assign 'data' to 'products' variable
     // After fetching, you can now perform any operations with 'products'
@@ -30,12 +30,12 @@ function displayProducts(category) {
     productsBox.appendChild(productCard);
   });
 }
-function displayProductsByModel(model){
+function displayProductsByModel(model) {
   const productsBox = document.querySelector(".products__box");
   productsBox.innerHTML = ""; // Clear previous products
 
-  let filteredProducts = products.filter(
-    (product) => product.model.includes(model)
+  let filteredProducts = products.filter((product) =>
+    product.model.includes(model)
   );
   filteredProducts.forEach((product) => {
     const productCard = document.createElement("div");
@@ -49,7 +49,6 @@ function displayProductsByModel(model){
         `;
     productsBox.appendChild(productCard);
   });
-
 }
 function displayProducts2(products) {
   const productsBox = document.querySelector(".products__box");
@@ -59,7 +58,9 @@ function displayProducts2(products) {
     const productCard = document.createElement("div");
     productCard.classList.add("product__card");
     productCard.innerHTML = `
+            <div class="product__img-container">
             <img src="${product.image}" alt="${product.name}">
+            </div>
             <h6>${product.name}</h6>
             <p>Price: ${product.price}</p>
             <p>Product Number: ${product.number}</p>
@@ -143,18 +144,18 @@ const categoryImages = {
   cat15: "./images/15kuzov.png",
 };
 
-const selectModel = document.getElementById('select__model');
-const selectCategory = document.getElementById('select__category');
+const selectModel = document.getElementById("select__model");
+const selectCategory = document.getElementById("select__category");
 let selectedCategoryId = null;
 
-selectCategory.addEventListener('change', function(){
-selectedCategoryId = this.value; // Get the value of the selected option
-  displayProducts(parseInt(selectedCategoryId)); // Display the products for the selected 
+selectCategory.addEventListener("change", function () {
+  selectedCategoryId = this.value; // Get the value of the selected option
+  displayProducts(parseInt(selectedCategoryId)); // Display the products for the selected
 });
-selectModel.addEventListener('change', function(){
+selectModel.addEventListener("change", function () {
   const selectedModel = this.value;
   displayProductsByModel(selectedModel);
-})
+});
 
 let currentCategoryId = null; // Variable to store the currently clicked category ID
 
@@ -204,4 +205,3 @@ for (let i = 1; i <= 15; i++) {
     });
   });
 }
-

@@ -21,7 +21,6 @@ nav {
     width: 100%;
     top: 0;
     z-index: 99;
-    height: 82px;
     background-color: rgba(56, 47, 47, 0.735);
 }
 
@@ -53,25 +52,29 @@ nav {
     border: 1px solid black;
     border-radius: 10px;
 }
+
+.btn-group {
+    margin: 0 auto;
+}
+
+/* ////    FOOTER    //// */
 footer {
     background-color: rgb(52, 45, 45);
     padding: 30px 0;
 }
 
-/* .footer__logo {
-    color: rgba(255, 0, 0, 0.712);
-} */
-
 .footer__box {
     display: flex;
     justify-content: space-around;
 }
-.footer__line{
+
+.footer__line {
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: center;
 }
+
 .footer__list {
     list-style: none;
     color: wheat;
@@ -83,12 +86,40 @@ footer {
     text-decoration: none;
     font: 13px;
 }
-.footer__link:hover{
+
+.footer__link:hover {
     color: white;
-    text-decoration:solid;
+    text-decoration: solid;
 }
 
-.footer__title{
+.footer__title {
     font-size: 17px;
     color: white;
+    margin-bottom: 10px;
+}
+
+.locator__button {
+    padding: 6px;
+    margin: 20px 0;
+    width: 100px;
+
+}
+
+.locator__title {
+    text-align: center;
+    margin: 15px 0;
+}
+.address__card{
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid grey;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 10px;
+}
+.branch__name{
+    margin-bottom: 60px;
+}
+.bold{
+    font-weight: 700;
 }

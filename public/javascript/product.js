@@ -10,7 +10,7 @@ fetch("../includes/products.json")
 
     const urlParams = new URLSearchParams(window.location.search);
     const productId = urlParams.get("id");
-
+  
     const foundProduct = products.find(
       (foundProduct) => foundProduct.number == productId
     );
@@ -22,7 +22,7 @@ fetch("../includes/products.json")
     const productBrand = document.querySelector('.product__brand');
     const productModel = document.querySelector('.product__model');
 
-    productImage.src = foundProduct.image;
+    productImage.src = "." + foundProduct.image;
     productName.textContent = "Имя товара: " + foundProduct.name;
     productPrice.textContent = "Цена: " + foundProduct.price;
     productNumber.textContent = "Код товара: " + foundProduct.number;
