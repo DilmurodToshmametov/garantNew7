@@ -10,13 +10,20 @@ fetch("./includes/products.json")
   .catch((error) => console.error("Error fetching products data:", error));
 
 // categorizing
-function displayProducts(category) {
+function displayProducts(category, model) {
   const productsBox = document.querySelector(".products__box");
   productsBox.innerHTML = ""; // Clear previous products
-
-  let filteredProducts = products.filter(
-    (product) => product.category === category
-  );
+  let filteredProducts;
+  if (model) {
+    filteredProducts = products.filter(
+      (product) =>
+        product.category === category && product.model.includes(model)
+    );
+  } else {
+    filteredProducts = products.filter(
+      (product) => product.category === category
+    );
+  }
   filteredProducts.forEach((product) => {
     const productCard = document.createElement("div");
     productCard.classList.add("product__card");
@@ -152,11 +159,22 @@ let selectedCategoryId = null;
 
 selectCategory.addEventListener("change", function () {
   selectedCategoryId = this.value; // Get the value of the selected option
-  displayProducts(parseInt(selectedCategoryId)); // Display the products for the selected
+
+  if (selectModel.value) {
+    displayProducts(parseInt(selectedCategoryId), selectModel.value);
+  } else {
+    selectedCategoryId = this.value; // Get the value of the selected option
+    displayProducts(parseInt(selectedCategoryId), null); // Display the products for the selected
+  }
 });
 selectModel.addEventListener("change", function () {
   const selectedModel = this.value;
-  displayProductsByModel(selectedModel);
+
+  if (selectCategory.value) {
+    displayProducts(parseInt(selectCategory.value), selectedModel);
+  } else {
+    displayProductsByModel(selectedModel);
+  }
 });
 
 let currentCategoryId = null; // Variable to store the currently clicked category ID

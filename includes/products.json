@@ -86,7 +86,7 @@
         "price": 11,
         "number": 71175,
         "image": "./images/ressor.jpg",
-        "model": ["NQR 71","NPR 37", "NQR 75"],
+        "model": ["NQR 71","NPR 37", "NQR 75", "NQR 55"],
         "brand": "ISUZU"
     },
     {
@@ -141,6 +141,24 @@
         "number": 57774,
         "image": "./images/ressor.jpg",
         "model": ["NQR 71","NPR 37", "NQR 75"],
+        "brand": "ISUZU"
+    },
+    {
+        "name": "Верхний рессор задний в сборе 160-71068 ФВР33",
+        "category": 11,
+        "price": 94,
+        "number": 71068,
+        "image": "./images/ressor.jpg",
+        "model": ["FVR"],
+        "brand": "ISUZU"
+    },
+    {
+        "name": "Верхний рессор задний коренной  лист №1  (1.20см)161-71071 FVR33",
+        "category": 11,
+        "price": 21.5,
+        "number": 71071,
+        "image": "./images/ressor.jpg",
+        "model": ["FVR"],
         "brand": "ISUZU"
     }
 
