@@ -85,16 +85,29 @@ const searchButton = document.querySelector(".search__button");
 
 searchButton.addEventListener("click", () => {
   const userInput = searchInput.value.toLowerCase().trim();
-
+  searchResultsContainer.innerHTML = "";
   displayProducts2(searchProducts(userInput));
 });
 
-searchInput.addEventListener("input", () => {
+searchInput.addEventListener('input', () => {
   const query = searchInput.value.toLowerCase().trim();
   const results = searchProducts(query);
   displaySearchResults(results);
+  searchResultsContainer.style.display = "block";
 });
-
+searchInput.addEventListener("click", ()=> {
+  const query = searchInput.value.toLowerCase().trim();
+  const results = searchProducts(query);
+  displaySearchResults(results);
+  searchResultsContainer.style.display = "block";
+})
+searchInput.addEventListener('keydown', function(event) {
+  if (event.key === 'Enter') {
+    const userInput = searchInput.value.toLowerCase().trim();
+    searchResultsContainer.innerHTML = "";
+    displayProducts2(searchProducts(userInput));
+  }
+});
 function searchProducts(query) {
   if (!query) return []; // Return empty array if query is empty
 
@@ -102,7 +115,7 @@ function searchProducts(query) {
   return products.filter(
     (product) =>
       product.name.toLowerCase().includes(query) ||
-      product.model.toLowerCase().includes(query) ||
+      product.model.includes(query) ||
       product.brand.toLowerCase().includes(query)
   );
 }
@@ -113,19 +126,16 @@ function displaySearchResults(results) {
   if (results.length === 0) {
     searchResultsContainer.innerHTML = "<p>No results found.</p>";
   } else {
-    results.forEach((result) => {
+    results.slice(0, 15).forEach((result) => {
       const resultElement = document.createElement("a");
-
-      // const highlightedName = highlightMatchedString(result.name, query);
-      // const highlightedModel = highlightMatchedString(result.model, query);
-      // const highlightedBrand = highlightMatchedString(result.brand, query);
 
       resultElement.classList.add("resultsDiv");
       resultElement.setAttribute(
         "href",
         `./view/product.html?id=${result.number}`
       );
-      resultElement.innerHTML = `<span class="left">${result.name} - ${result.model[0]} (${result.brand})</span><span class="right">${result.price}</span>`;
+      resultElement.innerHTML = `<span class="left">${result.name}</span><span class="right">${result.model[0]} (${result.brand})</span>`;
+      // <span class="right">${result.price}</span>
       searchResultsContainer.appendChild(resultElement);
     });
   }
@@ -225,3 +235,11 @@ for (let i = 1; i <= 15; i++) {
     });
   });
 }
+
+document.addEventListener('click', function(event) {
+  var target = event.target;
+  // Check if the click was outside of the search input and search results
+  if (target !== searchInput && !searchResultsContainer.contains(target)) {
+      // Hide search results
+      searchResultsContainer.style.display = "none";
+  }})

@@ -275,14 +275,16 @@ footer {
 
 .right {
     margin-right: 10px;
-    font-weight: 700;
+    color: rgb(37, 182, 195);
 }
 
 #searchResults {
     background-color: #FFF;
     position: absolute;
     top: 34px;
-    width: 450px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
 }
 
 .resultsDiv {
@@ -291,8 +293,7 @@ footer {
     text-decoration: none;
     color: black;
 }
-
-.highlight {
-    background-color: yellow;
-    font-weight: bold;
+.resultsDiv:hover{
+    color: red;
+    font-weight: 550;
 }
