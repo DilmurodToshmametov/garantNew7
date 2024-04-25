@@ -123,3 +123,18 @@ footer {
 .bold{
     font-weight: 700;
 }
+.fixed__bar{
+    width: 70px;
+    position:fixed;
+    right: 0px;
+    bottom: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: rgba(228, 227, 227, 0.735);
+    padding: 15px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
