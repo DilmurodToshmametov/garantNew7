@@ -28,13 +28,13 @@ function displayProducts(category, model) {
     const productCard = document.createElement("div");
     productCard.classList.add("product__card");
     productCard.innerHTML = `
-            <div class="product__img-container">
-            <img src="${product.image}" alt="${product.name}">
-            </div>
-            <h6>${product.name}</h6>
-            <p>Цена: ${product.price}$</p>
-            <p>Код товара: ${product.number}</p>
-            <a href="./view/product.html?id=${product.number}">Подробнее о товаре</a>
+    <div class="product__card-head">
+            <img class="product__card-img" src="${product.image}" alt="${product.name}">
+            </div><div class="product__card-body">
+            <h6 product__card-name>${product.name}</h6>
+            <p class="product__card-number">Код товара: ${product.number}</p>
+            <p class="product__card-price">Цена: ${(product.price * 12850).toLocaleString('en-US') + " сум"}</br></p>
+            <a class="product__card-more" href="./view/product.html?id=${product.number}">Подробно о товаре</a></div>
         `;
     productsBox.appendChild(productCard);
   });
@@ -50,11 +50,13 @@ function displayProductsByModel(model) {
     const productCard = document.createElement("div");
     productCard.classList.add("product__card");
     productCard.innerHTML = `
-            <img src="${product.image}" alt="${product.name}">
-            <h6>${product.name}</h6>
-            <p>Price: ${product.price}</p>
-            <p>Product Number: ${product.number}</p>
-            <a href="./view/product.html?id=${product.number}">Подробнее о товаре</a>
+    <div class="product__card-head">
+    <img class="product__card-img" src="${product.image}" alt="${product.name}">
+    </div><div class="product__card-body">
+    <h6 product__card-name>${product.name}</h6>
+    <p class="product__card-number">Код товара: ${product.number}</p>
+    <p class="product__card-price">Цена: ${(product.price * 12850).toLocaleString('en-US') + " сум"}</br></p>
+    <a class="product__card-more" href="./view/product.html?id=${product.number}">Подробно о товаре</a></div>
         `;
     productsBox.appendChild(productCard);
   });
@@ -67,13 +69,13 @@ function displayProducts2(products) {
     const productCard = document.createElement("div");
     productCard.classList.add("product__card");
     productCard.innerHTML = `
-            <div class="product__img-container">
-            <img src="${product.image}" alt="${product.name}">
-            </div>
-            <h6>${product.name}</h6>
-            <p>Price: ${product.price}</p>
-            <p>Product Number: ${product.number}</p>
-            <a href="./view/product.html?id=${product.number}">Подробнее о товаре</a>
+    <div class="product__card-head">
+    <img class="product__card-img" src="${product.image}" alt="${product.name}">
+    </div><div class="product__card-body">
+    <h6 product__card-name>${product.name}</h6>
+    <p class="product__card-number">Код товара: ${product.number}</p>
+    <p class="product__card-price">Цена: ${(product.price * 12850).toLocaleString('en-US') + " сум"}</br></p>
+    <a class="product__card-more" href="./view/product.html?id=${product.number}">Подробно о товаре</a></div>
         `;
     productsBox.appendChild(productCard);
   });
@@ -89,20 +91,20 @@ searchButton.addEventListener("click", () => {
   displayProducts2(searchProducts(userInput));
 });
 
-searchInput.addEventListener('input', () => {
+searchInput.addEventListener("input", () => {
   const query = searchInput.value.toLowerCase().trim();
   const results = searchProducts(query);
   displaySearchResults(results);
   searchResultsContainer.style.display = "block";
 });
-searchInput.addEventListener("click", ()=> {
+searchInput.addEventListener("click", () => {
   const query = searchInput.value.toLowerCase().trim();
   const results = searchProducts(query);
   displaySearchResults(results);
   searchResultsContainer.style.display = "block";
-})
-searchInput.addEventListener('keydown', function(event) {
-  if (event.key === 'Enter') {
+});
+searchInput.addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
     const userInput = searchInput.value.toLowerCase().trim();
     searchResultsContainer.innerHTML = "";
     displayProducts2(searchProducts(userInput));
@@ -236,10 +238,11 @@ for (let i = 1; i <= 15; i++) {
   });
 }
 
-document.addEventListener('click', function(event) {
+document.addEventListener("click", function (event) {
   var target = event.target;
   // Check if the click was outside of the search input and search results
   if (target !== searchInput && !searchResultsContainer.contains(target)) {
-      // Hide search results
-      searchResultsContainer.style.display = "none";
-  }})
+    // Hide search results
+    searchResultsContainer.style.display = "none";
+  }
+});
