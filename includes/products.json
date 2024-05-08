@@ -160,8 +160,158 @@
         "image": "./images/ressor.jpg",
         "model": ["FVR"],
         "brand": "ISUZU"
+    },
+    {
+        "name": "НИЖНИЙ РЕССОР ЗАДНИЙ №3 КОРЕННОЙ ЛИСТ (170см) 163 -71070 FVR33",
+        "category": 11,
+        "price": 34,
+        "number": 71070,
+        "image": "./images/ressor.jpg",
+        "model": ["FVR"],
+        "brand": "ISUZU"
+    },
+    {
+        "name": "Верхний рессор задний в сборе 160-71068 ФВР33",
+        "category": 11,
+        "price": 94,
+        "number": 71068,
+        "image": "./images/ressor.jpg",
+        "model": ["FVR"],
+        "brand": "ISUZU"
+    },
+    {
+        "name": "НИЖНИЙ РЕССОР ЗАДНИЙ №4 КОРЕННОЙ ЛИСТ (165см)  FVR33",
+        "category": 11,
+        "price": 28,
+        "number": 70370,
+        "image": "./images/ressor.jpg",
+        "model": ["FVR"],
+        "brand": "ISUZU"
+    },
+    {
+        "name": "Верхний рессор задний коренной  лист №3 (90см) FVR33",
+        "category": 11,
+        "price": 16,
+        "number": 70369,
+        "image": "./images/ressor.jpg",
+        "model": ["FVR"],
+        "brand": "ISUZU"
+    },
+    {
+        "name": "Верхний рессор задний коренной  лист №2  (115см)  FVR33",
+        "category": 11,
+        "price": 23.5,
+        "number": 70368,
+        "image": "./images/ressor.jpg",
+        "model": ["FVR"],
+        "brand": "ISUZU"
+    },
+    {
+        "name": "Рессор передний в сборе FVR33 1-51130349-0",
+        "category": 11,
+        "price": 170,
+        "number": 70362,
+        "image": "./images/ressor.jpg",
+        "model": ["FVR"],
+        "brand": "ISUZU"
+    },
+    {
+        "name": "Нижний рессор задний лист №5 с креплением FVR33 (1-51311-507-0)",
+        "category": 11,
+        "price": 22,
+        "number": 70352,
+        "image": "./images/ressor.jpg",
+        "model": ["FVR"],
+        "brand": "ISUZU"
+    },
+    {
+        "name": "Верхний рессор задний лист №4 с креплением FVR33 (151311-215-0)",
+        "category": 11,
+        "price": 17,
+        "number": 70351,
+        "image": "./images/ressor.jpg",
+        "model": ["FVR"],
+        "brand": "ISUZU"
+    },
+    {
+        "name": "НИЖНИЙ РЕССОР ЗАДНИЙ №2 ПОД КОРЕННОЙ 162-70286 FVR33",
+        "category": 11,
+        "price": 36,
+        "number": 70286,
+        "image": "./images/ressor.jpg",
+        "model": ["FVR"],
+        "brand": "ISUZU"
+    },
+    {
+        "name": "Задний Рессор в сборе  HOWO/SHACMAN",
+        "category": 11,
+        "price": 289,
+        "number": 73003,
+        "image": "./images/ressor.jpg",
+        "model": ["Shacman"],
+        "brand": "ISUZU"
+    },
+    {
+        "name": "Рессора Задняя Коренная (WG97) HOWO/SHACMAN",
+        "category": 11,
+        "price": 40,
+        "number": 73002,
+        "image": "./images/ressor.jpg",
+        "model": ["Shacman"],
+        "brand": "ISUZU"
+    },
+    {
+        "name": "Рессора Задняя Коренная (WG97) HOWO/SHACMAN",
+        "category": 11,
+        "price": 39,
+        "number": 73001,
+        "image": "./images/ressor.jpg",
+        "model": ["Shacman"],
+        "brand": "ISUZU"
+    },
+    {
+        "name": "Диск Колеса 17,5* 6  (12mm) STRONG",
+        "category": 10,
+        "price": 55,
+        "number": 70292,
+        "image": "./images/ressor.jpg",
+        "model": [""],
+        "brand": "ISUZU"
+    },
+    {
+        "name": "Диск колеса 17,5*6,00",
+        "category": 10,
+        "price": 45,
+        "number": 57787,
+        "image": "./images/ressor.jpg",
+        "model": [""],
+        "brand": "ISUZU"
+    },
+    {
+        "name": "Диск Колеса 22.5*9  14мм 10-26/281/335/175FVR",
+        "category": 10,
+        "price": 81,
+        "number": 70298,
+        "image": "./images/ressor.jpg",
+        "model": ["FVR"],
+        "brand": "ISUZU"
+    },
+    {
+        "name": "Диск Колеса  22.5*8.25 10-26/281/335/169 FVR",
+        "category": 10,
+        "price": 83,
+        "number": 70001,
+        "image": "./images/ressor.jpg",
+        "model": ["FVR"],
+        "brand": "ISUZU"
+    },
+    {
+        "name": "Диск колеса 16 /75/185   Gazel",
+        "category": 10,
+        "price": 45,
+        "number": 70401,
+        "image": "./images/ressor.jpg",
+        "model": ["Gazel"],
+        "brand": ""
     }
-
-
-    
 ]

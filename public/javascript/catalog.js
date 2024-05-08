@@ -33,7 +33,7 @@ function displayProducts(category, model) {
             </div><div class="product__card-body">
             <h6 product__card-name>${product.name}</h6>
             <p class="product__card-number">Код товара: ${product.number}</p>
-            <p class="product__card-price">Цена: ${(product.price * 12850).toLocaleString('en-US') + " сум"}</br></p>
+            <p class="product__card-price">Цена: ${(product.price * 1.1 * 12850).toLocaleString('en-US') + " сум"}</br></p>
             <a class="product__card-more" href="./view/product.html?id=${product.number}">Подробно о товаре</a></div>
         `;
     productsBox.appendChild(productCard);
@@ -55,7 +55,7 @@ function displayProductsByModel(model) {
     </div><div class="product__card-body">
     <h6 product__card-name>${product.name}</h6>
     <p class="product__card-number">Код товара: ${product.number}</p>
-    <p class="product__card-price">Цена: ${(product.price * 12850).toLocaleString('en-US') + " сум"}</br></p>
+    <p class="product__card-price">Цена: ${(product.price * 1.1 * 12850).toLocaleString('en-US') + " сум"}</br></p>
     <a class="product__card-more" href="./view/product.html?id=${product.number}">Подробно о товаре</a></div>
         `;
     productsBox.appendChild(productCard);
@@ -74,7 +74,7 @@ function displayProducts2(products) {
     </div><div class="product__card-body">
     <h6 product__card-name>${product.name}</h6>
     <p class="product__card-number">Код товара: ${product.number}</p>
-    <p class="product__card-price">Цена: ${(product.price * 12850).toLocaleString('en-US') + " сум"}</br></p>
+    <p class="product__card-price">Цена: ${(product.price * 1.1 * 12850).toLocaleString('en-US') + " сум"}</br></p>
     <a class="product__card-more" href="./view/product.html?id=${product.number}">Подробно о товаре</a></div>
         `;
     productsBox.appendChild(productCard);
